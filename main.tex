@@ -1,0 +1,74 @@
+\documentclass[11pt]{beamer}
+
+%For Positioning Logo in frametitle
+\usepackage{textpos}
+\makeatletter
+
+
+%%%%%%%% Theme and Colors %%%%%%%%
+\mode<presentation> {
+%\usetheme{PaloAlto}
+\usetheme{Rochester}
+}
+
+\addtobeamertemplate{frametitle}{}
+{
+    \begin{textblock*}{100mm}(.92\textwidth,-1.55cm)
+        \includegraphics[height=1.55cm,width=2cm,keepaspectratio]{img/logos/CEA_logo.png}
+    \end{textblock*}
+}
+
+%\setbeamercolor{structure}{fg=cyan!80!black}
+%\setbeamercolor*{block title example}{fg=blue!50,bg= blue!10}
+%\setbeamercolor*{block body example}{fg= red,bg= blue!5}
+
+\setbeamertemplate{footline}[page number]{} 
+
+%\setbeamercolor{headline}{fg=blue!90!black,bg=cyan!90!black}
+%\setbeamercolor{palette primary}{fg=white,bg=cyan!90!black}
+%\setbeamercolor{palette secondary}{fg=white,bg=cyan!90!black}
+%\setbeamercolor{palette tertiary}{fg=white,bg=black}
+\setbeamercolor{frametitle}{fg=white,bg=red!72!black}
+
+
+\input{config.tex}
+
+%%%%%%%% titulo e subtitulo %%%%%%%%
+\title[title]{Insert Title} 
+
+%%%%%%%% nome dos autores %%%%%%%%
+\author[author]
+{AUTHOR_NAME} 
+
+\date{INSERT DATE}
+
+\begin{document}
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+
+
+%%%%%%%% slides %%%%%%%%
+\section{Intro} 
+\begin{frame}{1}
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Olá}
+    Olá, tudo bem?
+\end{frame}
+
+%------------------------------------------------
+%------------------------------------------------
+%%%%%%%% References %%%%%%%%
+\nocite{*}
+\begin{frame}[allowframebreaks]{Referências}
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+\end{frame}
+
+
+\end{document}
